@@ -1,0 +1,26 @@
+#roses{
+	background-image:url("background.jpg");
+	background-size: cover;
+	width:auto;
+	height:auto;
+	background-repeat: no-repeat;
+}
+#header{
+text-align: center;
+font-size: 100px;
+font-family: 'Georgia'
+margin-top: 200px;
+color:rgb(144, 35, 109)
+
+
+
+
+}
+#book{
+	width:1600px;
+	height:1600px;
+	opacity:.8;
+	margin-left:150px;
+
+
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+	<title>wedding memory book</title>
+	<h1 id="header">Happily Ever After</h1>
+	<link rel="stylesheet" type="text/css" href="project.css">
+</head>
+<body id="roses">
+	<img src="book.png" id="book">
+	<div>
+		<input type="text" name="userName"  id="name" placeholder="Enter your name"><br>
+		<input type="text" name="message" id="message" placeholder="Enter your message" height="50" width="50">
+		<br>
+		<button id="submit">submit message</button> 
+		<ul id="ull">
+		</ul>
+		
+	</div>
+	<script type="text/javascript">
+		$('#submit').click(function(){
+	$('#ull').append(('<li>') + $('#name').val()+ " : "+ $('#message').val())
+})
+	</script>
+<script type="text/javascript" src="project.js"></script>
+</body>
+</html>
