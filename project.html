@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
 
-	<title>wedding memory book</title>
-	<h1 id="header">Happily Ever After</h1>
-	<link rel="stylesheet" type="text/css" href="project.css">
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+    <title>wedding memory book</title>
+    <link rel="stylesheet" type="text/css" href="project.css">
 </head>
-<body id="roses">
-	<img src="book.png" id="book">
-	<div>
-		<input type="text" name="userName"  id="name" placeholder="Enter your name"><br>
-		<input type="text" name="message" id="message" placeholder="Enter your message" height="50" width="50">
-		<br>
-		<button id="submit">submit message</button> 
-		<ul id="ull">
-		</ul>
-		
-	</div>
-	<script type="text/javascript">
-		$('#submit').click(function(){
-	$('#ull').append(('<li>') + $('#name').val()+ " : "+ $('#message').val())
-})
-	</script>
-<script type="text/javascript" src="project.js"></script>
+
+<body>
+	    <h1 id="header">Happily Ever After</h1>
+
+ 	<center>
+ 		<div id="wishesBook"><ul id="ull"></ul></div>
+ 	</center> 	
+    
+    <div id="boxex">
+        <input type="text" name="userName" id="name" placeholder="Enter your name">
+        <br>
+        <input type="text" name="message" id="message" placeholder="Enter your message" height="50" width="50">
+        <br>
+        <button id="submit">submit message</button>
+        <br>
+        <button id="remove">remove message</button>
+    </div>
+
+    <script type="text/javascript">
+        $('#submit').click(function() {
+            // $('#ull').append(('<li>') + $('#name').val()+ " : "+ $('#message').val());
+            $('#ull').append(`<li>${$('#name').val()} : ${$('#message').val()}  </li>`)
+            $('#ull li:even').css('color', 'pink');
+            $('#ull li:odd').css('color', 'purple');
+            $('#name').val("")
+                    $('#message').val("")
+
+
+        })
+        $('#remove').click(function(){
+		$('#ull li:last-child').remove();
+
+        })
+    </script>
+     <script src='jquery.cloudinary.js' type='text/javascript'></script>
+    <script type="text/javascript" src="project.js"></script>
 </body>
+
 </html>

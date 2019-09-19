@@ -1,4 +1,4 @@
-#roses{
+body {
 	background-image:url("background.jpg");
 	background-size: cover;
 	width:auto;
@@ -7,15 +7,12 @@
 }
 #header{
 text-align: center;
-font-size: 100px;
-font-family: 'Georgia'
+font-size: 200px;
 margin-top: 200px;
-color:rgb(144, 35, 109)
-
-
-
-
+color: #6B8E23;
+font-family: Brush Script MT, Brush Script Std, cursive
 }
+
 #book{
 	width:1600px;
 	height:1600px;
@@ -24,3 +21,23 @@ color:rgb(144, 35, 109)
 
 
 }
+
+#ull {
+	text-align: left;
+}
+
+#wishesBook {
+	text-align: center;
+	background-image:url("book.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1100px;
+	width:  1500px;
+	/*position: absolute;*/
+}
+#boxes{
+position:absolute;
+}
+
+
+
