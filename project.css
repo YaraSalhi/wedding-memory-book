@@ -9,7 +9,8 @@ body {
 text-align: center;
 font-size: 200px;
 margin-top: 200px;
-color: #6B8E23;
+/*color: #6B8E23;*/
+color: green;
 font-family: Brush Script MT, Brush Script Std, cursive
 }
 
@@ -34,10 +35,58 @@ font-family: Brush Script MT, Brush Script Std, cursive
 	height: 1100px;
 	width:  1500px;
 	/*position: absolute;*/
+	padding-left: 79px;
+    padding-top: 17px;
+    margin-
 }
 #boxes{
-position:absolute;
+		text-align: center;
+
+
 }
 
+#names{
+	text-align: center;
+	font-size: 150px;
+	font-family:"Times New Roman", Times, serif;
+	color:purple;
+}
 
+#passBoxHide{
+	text-align: center;
+	/*size: 50;*/
+	height: 50px;
+}
+#pass{
+	height: 50px;
 
+}
+
+#pass::placeholder{
+	font-size: 30px;
+}
+
+#enter{
+	height: 50px;
+	width: 70px;
+	font-size: 20px;
+}
+
+.inputBox{
+	height: 50px;
+	width:400px;
+}
+.inputBox::placeholder{
+	font-size: 30px;
+}
+
+.btn{
+	height: 50px;
+	width: 300px;
+	font-size: 20px;
+}
+#bride{
+	position:absolute;
+	padding-top:650px;
+	padding-left:1650px;
+}

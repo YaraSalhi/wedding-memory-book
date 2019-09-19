@@ -9,26 +9,53 @@
 </head>
 
 <body>
-	<div id = "passBoxHide">
-        <input type="password" name="passPage" id="pass" placeholder="Enter the password">
-    	<button id="enter">Enter</button>
-    	<h3 id ="error">Try Again</h3>
-    </div>
+	<!-- <div id="submitName">
+           <input type="text" name="groomName" id="groomName" class = "inputBox" placeholder="Enter the groom name">
+           <br>
+           <input type="text" name="brideName" id="brideName" class = "inputBox" placeholder="Enter the bride name">
+           <br>
+           <input type="password" name="yourPass" id="yourPass" class = "inputBox" placeholder="Enter the password you want">
+           <br>
+           <button id="save" class ="btn">Save</button>
+       </div> -->
+
+	
 	    <h1 id="header">Happily Ever After</h1>
+	    <h3 id="names"> Seif & Sali</h3>
+	    <div id = "passBoxHide">
+        	<input type="password"  size=50  name="passPage" id="pass" placeholder="Enter the password">
+    		<button id="enter" >Enter</button>
+    		<h3 id ="error">Try Again</h3>
+    	</div>
+	    <br>
+	    <br>
+
+	    <div id="boxes">
+	        <input type="text" name="userName" id="name" class="inputBox"  placeholder="Enter your name">
+	        <br>
+	        <input type="text" name="message" id="message" class="inputBox" placeholder="Enter your message" height="50" width="50">
+	        <br>
+	        <button id="submit" class="btn">submit message</button>
+	        <br>
+	        <button id="remove" class="btn">remove message</button>
+	    </div>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+
+	    <div><img src="bride.png" id="bride"></div>
+
 
  	<center>
- 		<div id="wishesBook"><ul id="ull"></ul></div>
+ 		<div id="wishesBook">
+ 			<ul id="ull">
+
+ 		</ul></div>
  	</center> 	
     
-    <div id="boxes">
-        <input type="text" name="userName" id="name" placeholder="Enter your name">
-        <br>
-        <input type="text" name="message" id="message" placeholder="Enter your message" height="50" width="50">
-        <br>
-        <button id="submit">submit message</button>
-        <br>
-        <button id="remove">remove message</button>
-    </div>
+    
 
     <script type="text/javascript">
     	var pass = document.getElementById("pass");
@@ -36,6 +63,23 @@
         // var rightPass = "yara";
         $("#boxes").hide();
         $("#error").hide();
+
+		// $('#save').click(function() {
+  //          var groomName1 = $('#groomName').val();
+  //          var brideName1 = $('#brideName').val();
+  //          var pass1 = $('#yourPass').val();
+  //          if($('#groomName').val() === "" || $('#brideName').val() === "" || $('#yourPass').val() === ""){
+  //              alert('Please fill the boxes');
+  //              $('#passBoxHide').hide();
+  //              $("#boxes").hide();
+  //          } else {
+  //              $('#submitName').hide();
+  //              $('#passBoxHide').show();
+  //          }
+  //      })
+
+
+
         $('#enter').click(function() {
             $("#boxes").show();
             
@@ -44,17 +88,20 @@
                 $("#passBoxHide").hide();
             } else {
                 alert("Try Again");
+                $("#boxes").hide();
+                $('#pass').val("");
             }
         })
         $('#submit').click(function() {
             // $('#ull').append(('<li>') + $('#name').val()+ " : "+ $('#message').val());
             $('#ull').append(`<li>${$('#name').val()} : ${$('#message').val()}  </li>`)
-            $('#ull li:even').css('color', 'pink');
+            $('#ull li:even').css('color', 'green');
+            $('#ull li').css('font-size', '50px');
             $('#ull li:odd').css('color', 'purple');
             $('#name').val("")
-                    $('#message').val("")
+                    $('#message').val("");
         })
-        
+
         $('#remove').click(function(){
 			$('#ull li:last-child').remove();
         })
